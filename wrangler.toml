@@ -1,0 +1,22 @@
+name = "cloudflare-emailer"
+main = "src/index.js"
+compatibility_date = "2026-01-19"
+compatibility_flags = []
+
+[env.development]
+name = "cloudflare-emailer-dev"
+vars = { DOMAIN = "example.com" }
+
+[[env.development.bindings]]
+binding = "send_email"
+type = "send_email"
+
+[env.production]
+name = "cloudflare-emailer-prod"
+route = "emailer.example.com/*"
+zone_id = "YOUR_ZONE_ID"
+vars = { DOMAIN = "yourdomain.com" }
+
+[[env.production.bindings]]
+binding = "send_email"
+type = "send_email"
