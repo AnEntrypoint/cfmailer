@@ -22,3 +22,8 @@
 - Sender address must be from verified domain - Cloudflare validates at send time
 - Service Workers (deprecated) - use Module Workers only
 - Email Workers can be combined with KV/R2/AI for advanced features
+
+## Deployment Notes
+- `gh repo create` with `--push` flag automatically pushes to main branch
+- GitHub CLI requires authentication - `gh auth login` must be done once
+- Remote URL is HTTPS by default with `gh` CLI
